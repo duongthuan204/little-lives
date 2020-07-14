@@ -1,0 +1,49 @@
+<div class="modal" [ngClass]="{'is-active': isDisplay}">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Create New Album</p>
+        <button class="delete" aria-label="close" (click)="closeDialog()"></button>
+      </header>
+      <section class="modal-card-body">
+        <div class="field">
+            <label class="label">Album Name*</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Album Name" [(ngModel)]="album.albumName" maxlength="80">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Description</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="Description" [(ngModel)]="album.description" maxlength="250"></textarea>
+            </div>
+          </div>          
+          <div class="field">
+            <label class="label">Album Cover*</label>
+            <div class="control">
+                <div class="file has-name is-fullwidth">
+                    <label class="file-label">
+                      <input id="fileInput" class="file-input" type="file" accept=".jpg,.jpeg,.png" (change)="uploadImage($event)">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Choose an image...
+                        </span>
+                      </span>
+                      <span class="file-name">
+                        {{fileName}}
+                      </span>
+                    </label>
+                  </div> 
+            </div>
+          </div>                         
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-info" (click)="createNewAlbum()">Create</button>
+        <button class="button" (click)="closeDialog()">Cancel</button>
+        <p class="ml-2" *ngIf="hasError" style="color: red">Please complete all required (*) fields!</p>
+      </footer>
+    </div>
+  </div>

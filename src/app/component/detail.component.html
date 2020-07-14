@@ -1,0 +1,119 @@
+<span routerLink="/" class="icon is-large back-button is-clickable mb-1">
+  <i class="fas fa-arrow-left"></i>
+</span>
+<div class="columns">
+  <div class="column is-4">
+      <figure class="image is-3by2">
+        <img src="{{album.coverImage}}" alt="{{album.albumName}}" style="border-radius: 5px">
+      </figure>
+  </div>
+  <div class="column is-8">
+    <div class="box">
+      <article class="media">
+        <div class="media-content">
+          <div class="content">
+            <p class="title is-4">{{album.albumName}}</p>
+            <p class="subtitle is-6 has-text-right">{{album.createDate}}</p>
+            <p>{{album.description}}</p>
+            <nav class="level is-mobile">
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Photos</p>
+                  <p class="title">{{album.imageList.length}}</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Likes</p>
+                  <p class="title">{{album.like}}</p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Favorite</p>
+                  <p class="title">
+                      <span [ngClass]="{'has-text-warning': album.star == true}" class="icon is-clickable" (click)="album.star = !album.star">
+                        <i class="fas fa-star"></i>
+                      </span>
+                  </p>
+                </div>
+              </div>
+            </nav>            
+          </div>
+        </div>
+      </article>
+    </div>  
+  </div>  
+</div>
+<div class='columns is-multiline'>
+  <div class='column is-2'>
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-square has-background-grey-light">
+          <span class="icon is-large add-new-album">
+            <i class="fas fa-plus-circle fa-5x"></i>
+          </span>          
+          <div class="card-content add-image">
+            <label class="image-upload-container btn btn-bwm">
+              <div class="field is-clickable" style="height: 100%">
+                <div class="file is-large is-boxed">
+                  <label class="file-label">
+                    <input id="fileInput" class="file-input" type="file" accept=".jpg,.jpeg,.png" (change)="uploadImage($event)">
+                    <span class="file-cta" style="display: none">
+                      <span class="file-icon">
+                        <i class="fas fa-plus-circle fa-3x"></i>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </div>          
+            </label>
+          </div>
+        </figure>
+        <div class="overlay has-text-centered">
+          <span>Add Photo</span>
+        </div>        
+      </div>
+    </div>
+  </div>
+  <div class='column is-2' *ngFor="let image of album.imageList; let i = index">
+    <div class="card album-cover">
+      <div class="card-image">
+        <figure class="image is-square">
+          <img class="is-clickable" src="{{image.imageUrl}}" alt="{{image.imageName}}" (click)="displayImage(image, i)">
+          <div class="overlay overlay-background has-text-right">
+            <span class="icon" [ngClass]="{'has-text-warning': image.star == true}">
+              <i class="fas fa-star"></i>
+            </span>
+          </div>       
+          <div class="overlay">
+            <span class="icon is-clickable" [ngClass]="{'has-text-danger': image.like > 0}" (click)="likeImage(image)">
+              <i class="fas fa-heart"></i>
+            </span>
+            <span class="disable-select">{{image.like}}</span>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" [ngClass]="{'is-active': isDisplay}">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p class="image disable-select">
+      <img src="{{image.imageUrl}}" alt="{{image.imageName}}">
+    </p>
+  </div>  
+  <div class="image-nav-left" (click)="moveToImage(currentIndex - 1)">
+    <span class="icon is-large image-button-left">
+      <i class="fas fa-chevron-left fa-3x"></i>
+    </span>
+  </div>
+  <div class="image-nav-right" (click)="moveToImage(currentIndex + 1)">
+    <span class="icon is-large image-button-right">
+      <i class="fas fa-chevron-right fa-3x"></i>
+    </span>
+  </div>
+  <div class="modal-content"></div>
+  <button class="modal-close is-large" aria-label="close" (click)="closeImage()"></button>
+</div>

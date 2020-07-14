@@ -1,0 +1,11 @@
+.add-new-album {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+.album-cover {
+    transition: transform .3s;
+}
+.album-cover:hover {
+    transform: scale(1.05);
+}

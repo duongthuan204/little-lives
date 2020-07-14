@@ -1,0 +1,55 @@
+.album-cover {
+    transition: transform .3s;
+}
+.album-cover:hover {
+    transform: scale(1.15);
+}
+.file-cta, .file-cta:hover {
+    background: none;
+    border: none;
+    width: 100px;
+  }
+.image-nav-left {
+    position: absolute;
+    height: 100%;
+    width: 38%;
+    left: 5%;
+    cursor: pointer;
+}
+.image-nav-right {
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    right: 5%;
+    cursor: pointer;
+}
+.image-button-left {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    /* display: none; */
+}
+.image-button-right {
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    /* display: none; */
+}
+.image-nav-left:hover .image-button-left {
+    color: lightgray;
+}
+.image-nav-right:hover .image-button-right {
+    color: lightgray;
+}
+.add-image {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.add-new-album {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
