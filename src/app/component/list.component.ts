@@ -13,12 +13,14 @@ export class ListComponent implements OnInit {
   album: Album = new Album();
   albumList: Array<Album> = new Array;
   isDisplayNewAlbum: boolean;
+  defaultImage: string;
 
   constructor(
     private dataService: DataService,
     private router: Router) { }
 
   ngOnInit(): void {
+    this.defaultImage = 'assets/loading.gif';
     this.dataService.albumListData.subscribe(data => this.albumList = data);
   }
 

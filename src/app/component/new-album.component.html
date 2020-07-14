@@ -38,7 +38,10 @@
                     </label>
                   </div> 
             </div>
-          </div>                         
+          </div>
+          <figure class="image is-3by2" *ngIf="album.coverImage != null">
+            <img src="{{album.coverImage}}" alt="{{album.coverImage}}">
+          </figure>          
       </section>
       <footer class="modal-card-foot">
         <button class="button is-info" (click)="createNewAlbum()">Create</button>

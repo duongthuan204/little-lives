@@ -15,12 +15,14 @@ export class DetailComponent implements OnInit {
   image: Image = new Image();
   isDisplay: boolean;
   currentIndex: number;
+  defaultImage: string;
 
   constructor(
     private dataService: DataService,
     private router: Router) { }
 
   ngOnInit(): void {
+    this.defaultImage = 'assets/loading.gif';
     window.scrollTo(0, 0);
     this.dataService.albumData.subscribe(data => this.album = data);
     if (this.album == null) {

@@ -24,10 +24,10 @@
     </div>
   </div>
   <div class="column is-3 album-cover" *ngFor="let album of albumList">
-    <div class="card" style="border-radius: 8px;">
+    <div class="card disable-select" style="border-radius: 8px;">
       <div class="card-image is-clickable" (click)="goToDetail(album)">
         <figure class="image is-3by2">
-          <img src="{{album.coverImage}}" alt="{{album.albumName}}" style="border-radius: 8px 8px 0 0">
+          <img [defaultImage]="defaultImage" [lazyLoad]="album.coverImage" alt="{{album.albumName}}" style="border-radius: 8px 8px 0 0">
         </figure>
       </div>
       <div class="card-content">

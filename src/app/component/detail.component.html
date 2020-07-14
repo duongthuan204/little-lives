@@ -78,9 +78,9 @@
   </div>
   <div class='column is-2' *ngFor="let image of album.imageList; let i = index">
     <div class="card album-cover">
-      <div class="card-image">
+      <div class="card-image disable-select">
         <figure class="image is-square">
-          <img class="is-clickable" src="{{image.imageUrl}}" alt="{{image.imageName}}" (click)="displayImage(image, i)">
+          <img class="is-clickable" [defaultImage]="defaultImage" [lazyLoad]="image.imageUrl" alt="{{image.imageName}}" (click)="displayImage(image, i)">
           <div class="overlay overlay-background has-text-right">
             <span class="icon" [ngClass]="{'has-text-warning': image.star == true}">
               <i class="fas fa-star"></i>

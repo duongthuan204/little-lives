@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './component/list.component';
 import { DetailComponent } from './component/detail.component';
 import { NewAlbumComponent } from './component/new-album.component';
+import { LazyLoadImageModule, ScrollHooks } from 'ng-lazyload-image';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NewAlbumComponent } from './component/new-album.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    LazyLoadImageModule.forRoot(ScrollHooks)
   ],
   providers: [],
   bootstrap: [AppComponent]
