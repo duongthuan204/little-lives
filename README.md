@@ -1,6 +1,6 @@
 # Album - LittleLives
 
-![Preview](https://lh3.googleusercontent.com/pw/ACtC-3do1w7RUDtlHym0BbHetktBSCq-s0DYG74gcDYHR636sfKMi30Pumdlz92m3Dhd91_LIv6c6icQBYNsFr1rQSFeVrBcdOIdHpqeKnY-QiuA5nyxMLb9ou05eRp-MwePO8fr8N_EgwIctd9JTcC3cR7WwA=w1878-h897-no)
+![Preview](https://i.imgur.com/pgWPOHw.png)
 
 ## Overview
 
