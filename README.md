@@ -34,6 +34,10 @@ If port 4200 is conflicted, run `ng serve --port 4300` for another port.
 
 You can modify config file for quantity of albums and images generated. Find the file at `src\assets\config.ts`
 
+## Firebase hosting
+
+https://littlelives-6d412.web.app/
+
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
