@@ -8,7 +8,7 @@ An application for album management. You can create new album with name and cove
 
 I built this project with Angular CLI framework, enhanced with Bulma CSS. FakerJS is used to generate fake data. It gets images from [Lorem Picsum](https://picsum.photos/), which could be slow sometimes. Please note that data will be different everytime browser refreshes also.
 
-This project maybe not perfect to satisfy all the requirements, especially lazy loading. But I have tried all my best to make it as good as possible. Your review will be very valuable to me.
+This project maybe not perfect to satisfy all the requirements. But I have tried all my best to make it as good as possible. Your review will be very valuable to me.
 
 ## Prerequisites
 
