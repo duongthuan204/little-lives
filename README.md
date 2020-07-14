@@ -4,11 +4,11 @@
 
 ## Overview
 
-An application for album management. You can create new album with name and cover, and photos into it, and view photos in lightbox with navigation. Album and image are 2 main components of this project. They were designed with own model, view and controller.
+An application for album management. You can create a new album with name and cover, and photos into it, and view photos in lightbox with navigation. Album and image are 2 main components of this project. They were designed with their own model, view and controller.
 
-I built this project with Angular CLI framework, enhanced with Bulma CSS. FakerJS is used to generate fake data. It gets images from [Lorem Picsum](https://picsum.photos/), which could be slow sometimes. Please note that data will be different everytime browser refreshes also.
+I built this project with Angular CLI framework, enhanced with Bulma CSS. FakerJS is used to generate fake data. It gets images from [Lorem Picsum](https://picsum.photos/), which could be slow sometimes. Please note that data will be different everytime browser refreshes.
 
-This project maybe not perfect to satisfy all the requirements. But I have tried all my best to make it as good as possible. Your review will be very valuable to me.
+This project may not be perfect to satisfy all the requirements. But I have tried all my best to make it as good as possible. Your review will be very valuable to me.
 
 ## Prerequisites
 
