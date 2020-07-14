@@ -20,7 +20,7 @@ Then run `npm install -g @angular/cli` from cmd to install Angular CLI.
 
 ## Build
 
-After clone code, please navigate to the root folder of project, open cmnd and run `npm install` to build project.
+After clone code, please navigate to the root folder of project, open cmd and run `npm install` to build project.
 
 ## Deploy
 
